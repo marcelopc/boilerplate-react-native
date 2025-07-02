@@ -6,10 +6,18 @@ module.exports = [
       globals: {
         process: 'readonly',
         require: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        jest: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        test: 'readonly',
       },
     },
-    files: ['**/*.ts', '**/*.tsx'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.test.ts', '**/*.test.tsx'], // Inclui arquivos de teste
     plugins: {
+      react: require('eslint-plugin-react'), // Corrigido para eslint-plugin-react
       react: require('eslint-plugin-react-native'),
       '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
     },

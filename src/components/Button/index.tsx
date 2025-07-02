@@ -4,11 +4,12 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 interface ButtonProps {
   label: string;
   onClick: () => void;
+  testID?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick, testID }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onClick}>
+    <TouchableOpacity testID={testID} style={styles.button} onPress={onClick}>
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );

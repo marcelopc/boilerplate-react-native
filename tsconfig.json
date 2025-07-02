@@ -5,7 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*", "node_modules/*", "src/types/*"]
-    }
+    },
+    "jsx": "react-jsx", // Habilita suporte a JSX,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+   "include": ["src/**/*", "__tests__/**/*"],
 }
